@@ -1,0 +1,93 @@
+%!TEX encoding = UTF-8 Unicode
+
+% Define document class, font size and paper format
+\documentclass[a4paper,12pt]{article}
+
+% Set languages and encoding
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[american, norsk]{babel}
+\usepackage[babel]{csquotes}
+
+% Set up citation style and bibliographic resource
+\usepackage[style=apa, backend=biber]{biblatex}
+\DeclareLanguageMapping{american}{american-apa}
+\addbibresource{INFO361.bib}
+
+% Set up packages for various formatting purposes
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{setspace}
+\usepackage{color}
+\usepackage{fancyhdr}
+\usepackage[table]{xcolor}
+\usepackage{paralist}
+\usepackage{hyperref}
+\usepackage[all]{hypcap}
+
+\hypersetup{ 
+	colorlinks=false,
+	linkbordercolor={1 1 1}, 
+	% set to white 
+	citebordercolor={1 1 1}
+}
+
+
+\floatstyle{boxed} 
+\restylefloat{figure}
+\doublespacing
+
+% Set up document frontpage
+
+\pagestyle{fancy}
+\title{Home Exam INFO361\\Human Robot Interaction}
+\author{Student number: 186285}
+
+%%%%%%%%%%%%%%%%%
+% Begin document!
+
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+\newpage{}
+
+\selectlanguage{american}
+\addtocounter{page}{-2}
+\thispagestyle{empty}
+\tableofcontents
+
+\newpage{}
+
+Exploratory study, research questions in conclusion.
+
+Methods: usability studies, controlled experiments, etc. (cultural probes, experience prototyping, user enactments)
+Interaction models (Proxemics, tangible UI, instrumental interaction).
+
+Main focus on course literature, but possible (and probably good) to include other literature
+
+% Insert top level heading and logical section into document ...
+\section{Introduction}
+\input{introduction}
+
+\section{Literature}
+\input{literature}
+
+\section{Discussion}
+\input{Discussion}
+
+\section{Conclusion}
+
+
+
+% \section{Results}
+% \input{results}
+
+% \section{Discussion}
+% \input{discussion}
+\newpage{}
+
+\printbibliography
+
+\end{document}
